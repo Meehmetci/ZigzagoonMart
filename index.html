@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZigazagoonMart</title>
+<title>ZigzagoonMart</title>
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -16,45 +15,57 @@ scroll-behavior:smooth;
 }
 
 body{
-background:linear-gradient(
--45deg,
-#000000,
-#111111,
-#ff4fa3,
-#222222
-);
-background-size:400% 400%;
-animation:gradient 15s ease infinite;
+background:
+linear-gradient(135deg,#050505 0%,#1a1a1a 25%,#ffffff10 50%,#1a1a1a 75%,#050505 100%);
 color:white;
+overflow-x:hidden;
 }
 
-@keyframes gradient{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:
+repeating-linear-gradient(
+45deg,
+transparent 0px,
+transparent 40px,
+rgba(255,255,255,0.03) 40px,
+rgba(255,255,255,0.03) 80px
+);
+pointer-events:none;
 }
 
 header{
-background:#000000cc;
+position:sticky;
+top:0;
+background:rgba(0,0,0,.85);
 backdrop-filter:blur(10px);
-padding:20px;
+padding:18px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-position:sticky;
-top:0;
+border-bottom:2px solid #ff4d9d;
+z-index:1000;
 }
 
 .logo{
-font-size:30px;
-font-weight:bold;
-color:#ff4fa3;
+font-size:32px;
+font-weight:900;
+color:#fff;
+text-shadow:0 0 15px #ff4d9d;
 }
 
 nav a{
 color:white;
 text-decoration:none;
 margin-left:20px;
+font-weight:bold;
+transition:.3s;
+}
+
+nav a:hover{
+color:#ff4d9d;
 }
 
 .hero{
@@ -63,133 +74,184 @@ text-align:center;
 }
 
 .hero h1{
-font-size:60px;
+font-size:72px;
+margin-bottom:15px;
+text-shadow:0 0 25px #ff4d9d;
 }
 
 .hero p{
-margin-top:15px;
-font-size:20px;
+font-size:22px;
+color:#ddd;
+max-width:700px;
+margin:auto;
 }
 
 .btn{
 display:inline-block;
-margin-top:25px;
+margin-top:30px;
 padding:15px 30px;
-background:#ff4fa3;
-border-radius:10px;
-text-decoration:none;
+background:#ff4d9d;
 color:white;
+text-decoration:none;
+border-radius:12px;
+font-weight:bold;
+transition:.3s;
 }
 
-.cards{
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.section{
+padding:80px 40px;
+}
+
+.section h2{
+font-size:42px;
+margin-bottom:25px;
+color:#ff4d9d;
+}
+
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
-padding:40px;
 }
 
 .card{
-background:#111;
-padding:20px;
-border-radius:15px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.1);
+padding:25px;
+border-radius:18px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+border-color:#ff4d9d;
+box-shadow:0 0 20px rgba(255,77,157,.4);
+}
+
+.big{
+font-size:32px;
+font-weight:bold;
+margin-top:10px;
 }
 
 footer{
+padding:50px;
 text-align:center;
-padding:40px;
+color:#aaa;
 }
-
 </style>
 </head>
-
 <body>
 
 <header>
-
-<div class="logo">
-🦝 ZigazagoonMart
-</div>
+<div class="logo">🦝 ZigzagoonMart</div>
 
 <nav>
+<a href="#home">Home</a>
 <a href="#dashboard">Dashboard</a>
 <a href="#market">Markt</a>
 <a href="#stats">Statistieken</a>
 </nav>
-
 </header>
 
-<section class="hero">
+<section class="hero" id="home">
+<h1>ZigzagoonMart</h1>
+<p>
+De Pokémon Card Market van de toekomst.
+Volg prijzen, bekijk statistieken en ontdek trending kaarten.
+</p>
 
-<h1>ZigazagoonMart</h1>
-
-<p>Pokémon kaarten kopen, verkopen en prijzen volgen.</p>
-
-<a class="btn" href="#market">
+<a href="#market" class="btn">
 Bekijk Markt
 </a>
-
 </section>
 
-<section class="cards" id="dashboard">
+<section class="section" id="dashboard">
+<h2>Dashboard</h2>
+
+<div class="grid">
 
 <div class="card">
-<h2>Portfolio</h2>
-<h1>€12.450</h1>
+Portfolio Waarde
+<div class="big">€12.450</div>
 </div>
 
 <div class="card">
-<h2>Listings</h2>
-<h1>12.845</h1>
+Actieve Listings
+<div class="big">12.845</div>
 </div>
 
 <div class="card">
-<h2>Top Stijger</h2>
-<h1>Umbreon +18%</h1>
+Top Stijger
+<div class="big">Umbreon +18%</div>
 </div>
 
+<div class="card">
+Volume
+<div class="big">€2.3M</div>
+</div>
+
+</div>
 </section>
 
-<section class="cards" id="market">
+<section class="section" id="market">
+<h2>Trending Kaarten</h2>
+
+<div class="grid">
 
 <div class="card">
-<h2>Umbreon VMAX</h2>
-<p>€850</p>
+🔥 Umbreon VMAX
+<div class="big">€850</div>
 </div>
 
 <div class="card">
-<h2>Charizard Base Set</h2>
-<p>€950</p>
+🔥 Charizard Base Set
+<div class="big">€950</div>
 </div>
 
 <div class="card">
-<h2>Shiny Charizard GX</h2>
-<p>€420</p>
+🔥 Shiny Charizard GX
+<div class="big">€420</div>
 </div>
 
+</div>
 </section>
 
-<section class="cards" id="stats">
+<section class="section" id="stats">
+<h2>Statistieken</h2>
+
+<div class="grid">
 
 <div class="card">
-<h2>Charizard</h2>
-<p>+12%</p>
+Charizard
+<div class="big">+12%</div>
 </div>
 
 <div class="card">
-<h2>Pikachu</h2>
-<p>+8%</p>
+Pikachu
+<div class="big">+8%</div>
 </div>
 
 <div class="card">
-<h2>Umbreon</h2>
-<p>+18%</p>
+Umbreon
+<div class="big">+18%</div>
 </div>
 
+<div class="card">
+Mew
+<div class="big">-3%</div>
+</div>
+
+</div>
 </section>
 
 <footer>
-© 2026 ZigazagoonMart
+© 2026 ZigzagoonMart • Made by Meehmetci
 </footer>
 
 </body>
-</html>                
+</html>       
