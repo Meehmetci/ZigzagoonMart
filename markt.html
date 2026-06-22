@@ -4,44 +4,152 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Markt - ZigzagoonMart</title>
+
 <style>
-body{
-background:#0a0a0a;
-color:white;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Arial,sans-serif;
-padding:40px;
 }
-a{
+
+body{
+background:#050505;
+color:white;
+}
+
+header{
+background:#000;
+padding:20px 40px;
+border-bottom:2px solid #ff4d9d;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
 color:#ff4d9d;
 }
-.card{
-background:#151515;
-padding:20px;
-margin:20px 0;
-border-radius:15px;
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:bold;
 }
+
+nav a:hover{
+color:#ff4d9d;
+}
+
+.container{
+padding:50px;
+}
+
+h1{
+margin-bottom:30px;
+color:#ff4d9d;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#111;
+padding:25px;
+border-radius:18px;
+border:1px solid #222;
+}
+
+.price{
+font-size:28px;
+font-weight:bold;
+color:#00ff88;
+margin-top:10px;
+}
+
+footer{
+padding:40px;
+text-align:center;
+color:#888;
+}
+
 </style>
 </head>
+
 <body>
 
-<h1>🛒 Markt</h1>
+<header>
 
-<p><a href="index.html">← Terug naar Home</a></p>
+<div class="logo">
+🦝 ZigzagoonMart
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="markt.html">Markt</a>
+<a href="statistieken.html">Statistieken</a>
+<a href="prijzen.html">Prijzen</a>
+<a href="collectie.html">Collectie</a>
+</nav>
+
+</header>
+
+<div class="container">
+
+<h1>🛒 Pokémon Markt</h1>
+
+<div class="grid">
 
 <div class="card">
 <h2>Umbreon VMAX</h2>
-<p>€850</p>
+<p>Near Mint</p>
+<div class="price">€850</div>
 </div>
 
 <div class="card">
 <h2>Charizard Base Set</h2>
-<p>€950</p>
+<p>PSA 9</p>
+<div class="price">€950</div>
 </div>
 
 <div class="card">
 <h2>Shiny Charizard GX</h2>
-<p>€420</p>
+<p>Near Mint</p>
+<div class="price">€420</div>
 </div>
+
+<div class="card">
+<h2>Pikachu V</h2>
+<p>Near Mint</p>
+<div class="price">€45</div>
+</div>
+
+<div class="card">
+<h2>Mew EX</h2>
+<p>PSA 10</p>
+<div class="price">€280</div>
+</div>
+
+<div class="card">
+<h2>Rayquaza VMAX</h2>
+<p>Near Mint</p>
+<div class="price">€620</div>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 ZigzagoonMart
+</footer>
 
 </body>
 </html>
