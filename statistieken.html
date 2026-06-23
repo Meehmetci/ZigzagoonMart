@@ -1,39 +1,208 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Statistieken - ZigzagoonMart</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:
+radial-gradient(circle at top left,#ff4d9d33,transparent 30%),
+radial-gradient(circle at bottom right,#ffffff11,transparent 30%),
+#050505;
+color:white;
+}
+
+header{
+background:rgba(0,0,0,.85);
+backdrop-filter:blur(12px);
+padding:20px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:2px solid #ff4d9d;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:34px;
+font-weight:900;
+text-shadow:0 0 20px #ff4d9d;
+color:white;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:18px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#ff4d9d;
+}
+
+.container{
+padding:60px 40px;
+}
+
+h1{
+font-size:52px;
+color:#ff4d9d;
+margin-bottom:25px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.card{
+background:rgba(20,20,20,.85);
+padding:25px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.1);
+transition:.4s;
+backdrop-filter:blur(10px);
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 0 30px rgba(255,77,157,.4);
+border-color:#ff4d9d;
+}
+
+.big{
+font-size:34px;
+font-weight:bold;
+margin-top:10px;
+}
+
+.green{ color:#00ff88; }
+.red{ color:#ff5555; }
+
+.chart{
+margin-top:40px;
+background:rgba(20,20,20,.85);
+padding:30px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.1);
+}
+
+.bars{
+display:flex;
+align-items:flex-end;
+gap:12px;
+height:220px;
+margin-top:20px;
+}
+
+.bar{
+width:60px;
+background:#ff4d9d;
+border-radius:10px 10px 0 0;
+transition:.3s;
+}
+
+.bar:hover{
+background:#ff85c2;
+}
+
+footer{
+padding:40px;
+text-align:center;
+color:#888;
+margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">🦝 ZigzagoonMart</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="markt.html">Markt</a>
+<a href="statistieken.html">Statistieken</a>
+<a href="prijzen.html">Prijzen</a>
+<a href="collectie.html">Collectie</a>
+<a href="overons.html">Over Ons</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<div class="container">
+
+<h1>📊 Statistieken Dashboard</h1>
+
 <div class="grid">
 
 <div class="card">
-📈 Top Stijger
+Top Stijger
 <div class="big green">▲ 18%</div>
 <p>Umbreon VMAX</p>
 </div>
 
 <div class="card">
-📉 Top Daler
+Top Daler
 <div class="big red">▼ 3%</div>
 <p>Mew EX</p>
 </div>
 
 <div class="card">
-💰 Markt Volume
+Markt Volume
 <div class="big">€2.3M</div>
 <p>Laatste 30 dagen</p>
 </div>
 
 <div class="card">
-🛒 Actieve Listings
+Actieve Listings
 <div class="big">12.845</div>
 <p>Pokémon kaarten</p>
 </div>
 
-<div class="card">
-🔥 Charizard
-<div class="big green">▲ 12%</div>
-<p>Deze maand</p>
 </div>
 
-<div class="card">
-⚡ Pikachu
-<div class="big green">▲ 8%</div>
-<p>Deze maand</p>
+<div class="chart">
+
+<h2 style="color:#ff4d9d;">📈 Markt Trend</h2>
+
+<div class="bars">
+
+<div class="bar" style="height:60px;"></div>
+<div class="bar" style="height:90px;"></div>
+<div class="bar" style="height:120px;"></div>
+<div class="bar" style="height:80px;"></div>
+<div class="bar" style="height:160px;background:#00ff88;"></div>
+
+</div>
+
+<p style="margin-top:15px;color:#aaa;">
+Januari → Juni
+</p>
+
 </div>
 
 </div>
+
+<footer>
+© 2026 ZigzagoonMart • Made by Meehmetci
+</footer>
+
+</body>
+</html>
