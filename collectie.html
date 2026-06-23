@@ -3,147 +3,63 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mijn Collectie - ZigzagoonMart</title>
+<title>Collectie - ZigzagoonMart</title>
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-body{
-background:#050505;
-color:white;
-}
-
-header{
-background:#000;
-padding:20px 40px;
-border-bottom:2px solid #ff4d9d;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.logo{
-font-size:30px;
-font-weight:bold;
-color:#ff4d9d;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
-font-weight:bold;
-}
-
-nav a:hover{
-color:#ff4d9d;
-}
-
-.container{
-padding:50px;
-}
-
-h1{
-margin-bottom:30px;
-color:#ff4d9d;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.card{
-background:#111;
-padding:25px;
-border-radius:18px;
-border:1px solid #222;
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-border-color:#ff4d9d;
-}
-
-.value{
-font-size:28px;
-font-weight:bold;
-color:#00ff88;
-margin-top:10px;
-}
-
-footer{
-padding:40px;
-text-align:center;
-color:#888;
-}
-
+body{margin:0;font-family:Arial;background:#050505;color:white}
+header{background:rgba(0,0,0,.85);padding:20px 40px;display:flex;justify-content:space-between;border-bottom:2px solid #ff4d9d}
+.logo{font-size:34px;font-weight:900;text-shadow:0 0 20px #ff4d9d}
+nav a{color:white;margin-left:18px;text-decoration:none;font-weight:bold}
+nav a:hover{color:#ff4d9d}
+.container{padding:60px}
+h1{color:#ff4d9d;font-size:52px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.card{background:rgba(20,20,20,.85);padding:15px;border-radius:15px;transition:.3s;text-align:center}
+.card:hover{transform:scale(1.05);border:1px solid #ff4d9d}
+img{width:100%;border-radius:12px}
+footer{text-align:center;padding:40px;color:#888}
 </style>
 </head>
 
 <body>
 
 <header>
-
-<div class="logo">
-🦝 ZigzagoonMart
-</div>
-
+<div class="logo">🦝 ZigzagoonMart</div>
 <nav>
 <a href="index.html">Home</a>
 <a href="markt.html">Markt</a>
 <a href="statistieken.html">Statistieken</a>
 <a href="prijzen.html">Prijzen</a>
 <a href="collectie.html">Collectie</a>
+<a href="overons.html">Over Ons</a>
+<a href="contact.html">Contact</a>
 </nav>
-
 </header>
 
 <div class="container">
-
-<h1>📦 Mijn Collectie</h1>
+<h1>🎴 Collectie</h1>
 
 <div class="grid">
 
 <div class="card">
-<h2>Charizard Base Set</h2>
-<p>PSA 9</p>
-<div class="value">€950</div>
+<img src="https://images.pokemontcg.io/swsh7/95_hires.png">
+<p>Umbreon VMAX</p>
 </div>
 
 <div class="card">
-<h2>Umbreon VMAX</h2>
-<p>Near Mint</p>
-<div class="value">€850</div>
+<img src="https://images.pokemontcg.io/base1/4_hires.png">
+<p>Charizard</p>
 </div>
 
 <div class="card">
-<h2>Pikachu V</h2>
-<p>Near Mint</p>
-<div class="value">€45</div>
-</div>
-
-<div class="card">
-<h2>Mew EX</h2>
-<p>PSA 10</p>
-<div class="value">€280</div>
+<img src="https://images.pokemontcg.io/swsh45sv/SV107_hires.png">
+<p>Shiny Charizard</p>
 </div>
 
 </div>
-
 </div>
 
-<footer>
-© 2026 ZigzagoonMart • Made by Meehmetci
-</footer>
+<footer>© 2026 ZigzagoonMart</footer>
 
 </body>
 </html>
