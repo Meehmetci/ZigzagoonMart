@@ -15,29 +15,36 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:#050505;
+background:
+radial-gradient(circle at top left,#ff4d9d33,transparent 30%),
+radial-gradient(circle at bottom right,#ffffff11,transparent 30%),
+#050505;
 color:white;
 }
 
 header{
-background:#000;
+background:rgba(0,0,0,.85);
+backdrop-filter:blur(12px);
 padding:20px 40px;
-border-bottom:2px solid #ff4d9d;
 display:flex;
 justify-content:space-between;
 align-items:center;
+border-bottom:2px solid #ff4d9d;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 .logo{
-font-size:30px;
-font-weight:bold;
-color:#ff4d9d;
+font-size:34px;
+font-weight:900;
+text-shadow:0 0 20px #ff4d9d;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:20px;
+margin-left:18px;
 font-weight:bold;
 }
 
@@ -46,29 +53,57 @@ color:#ff4d9d;
 }
 
 .container{
-padding:50px;
+padding:60px 40px;
 }
 
 h1{
-margin-bottom:30px;
+font-size:52px;
 color:#ff4d9d;
+margin-bottom:20px;
+}
+
+.search{
+width:100%;
+max-width:500px;
+padding:15px;
+border:none;
+border-radius:15px;
+background:#111;
+color:white;
+margin-bottom:40px;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
 
 .card{
-background:#111;
-padding:25px;
-border-radius:18px;
-border:1px solid #222;
+background:rgba(20,20,20,.85);
+padding:20px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.1);
+transition:.4s;
+}
+
+.card:hover{
+transform:
+perspective(1000px)
+rotateX(6deg)
+rotateY(-6deg)
+translateY(-10px);
+
+box-shadow:0 0 30px rgba(255,77,157,.5);
+}
+
+.card img{
+width:100%;
+border-radius:15px;
 }
 
 .price{
-font-size:28px;
+font-size:32px;
 font-weight:bold;
 color:#00ff88;
 margin-top:10px;
@@ -97,6 +132,8 @@ color:#888;
 <a href="statistieken.html">Statistieken</a>
 <a href="prijzen.html">Prijzen</a>
 <a href="collectie.html">Collectie</a>
+<a href="overons.html">Over Ons</a>
+<a href="contact.html">Contact</a>
 </nav>
 
 </header>
@@ -105,39 +142,33 @@ color:#888;
 
 <h1>🛒 Pokémon Markt</h1>
 
+<input class="search" placeholder="🔍 Zoek Pokémon kaarten...">
+
 <div class="grid">
 
 <div class="card">
+<img src="https://images.pokemontcg.io/swsh7/95_hires.png">
 <h2>Umbreon VMAX</h2>
 <p>Near Mint</p>
 <div class="price">€850</div>
 </div>
 
 <div class="card">
+<img src="https://images.pokemontcg.io/base1/4_hires.png">
 <h2>Charizard Base Set</h2>
 <p>PSA 9</p>
 <div class="price">€950</div>
 </div>
 
 <div class="card">
-<h2>Shiny Charizard GX</h2>
+<img src="https://images.pokemontcg.io/swsh45sv/SV107_hires.png">
+<h2>Shiny Charizard</h2>
 <p>Near Mint</p>
 <div class="price">€420</div>
 </div>
 
 <div class="card">
-<h2>Pikachu V</h2>
-<p>Near Mint</p>
-<div class="price">€45</div>
-</div>
-
-<div class="card">
-<h2>Mew EX</h2>
-<p>PSA 10</p>
-<div class="price">€280</div>
-</div>
-
-<div class="card">
+<img src="https://images.pokemontcg.io/swsh7/111_hires.png">
 <h2>Rayquaza VMAX</h2>
 <p>Near Mint</p>
 <div class="price">€620</div>
@@ -148,7 +179,7 @@ color:#888;
 </div>
 
 <footer>
-© 2026 ZigzagoonMart
+© 2026 ZigzagoonMart • Made by Meehmetci
 </footer>
 
 </body>
